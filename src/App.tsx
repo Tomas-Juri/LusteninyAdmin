@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "wouter";
-import { GameHomePage, GameSelectionPage, LoginPage } from "./pages";
+import { GameCyphersPage, GameHomePage, GameSelectionPage, GameSetttingsPage, LoginPage } from "./pages";
+import { GameTeamsPage } from "./pages/GameTeamsPage";
 import { RootState } from "./redux/store";
 
 const App = () => {
@@ -14,6 +15,9 @@ const App = () => {
         <Route path="/login" component={LoginPage} />
         <Route path="/" component={GameSelectionPage} />
         <Route path="/games/:gameId" component={GameHomePage} />
+        <Route path="/games/:gameId/teams" component={GameTeamsPage} />
+        <Route path="/games/:gameId/cyphers" component={GameCyphersPage} />
+        <Route path="/games/:gameId/settings" component={GameSetttingsPage} />
       </Switch>
     </>
   );

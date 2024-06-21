@@ -114,8 +114,77 @@ const gameOverview = {
   ]
 };
 
+const gameTeams = {
+  teams: [
+    {
+      id: 1,
+      name: "Vítězové",
+      username: "vitezove",
+      members: 4,
+      pin: 2673
+    },
+    {
+      id: 2,
+      name: "La kukaračita",
+      username: "la_kukaracita",
+      members: 3,
+      pin: 6588
+    },
+    {
+      id: 3,
+      name: "Abakus",
+      username: "abakus",
+      members: 3,
+      pin: 9876
+    },
+    {
+      id: 4,
+      name: "Svědkové baronovi",
+      username: "svedkove_baronovi",
+      members: 2,
+      pin: 4701
+    },
+    {
+      id: 5,
+      name: "Anonymní alkoholici",
+      username: "anonymni_alkoholici",
+      members: 2,
+      pin: 8764
+    },
+    {
+      id: 6,
+      name: "Nejlepší tým",
+      username: "nejlepsi_tym",
+      members: 5,
+      pin: 3678
+    },
+    {
+      id: 7,
+      name: "Luštitelé",
+      username: "lustitele",
+      members: 2,
+      pin: 7892
+    },
+    {
+      id: 8,
+      name: "Bídníci",
+      username: "bidnici",
+      members: 6,
+      pin: 1921
+    },
+    {
+      id: 9,
+      name: "Marní",
+      username: "marni",
+      members: 3,
+      pin: 4981
+    }
+  ]
+};
+
 export const mocks = {
   token,
   games,
-  gameOverview
+  gameOverview,
+  gameTeams
 };

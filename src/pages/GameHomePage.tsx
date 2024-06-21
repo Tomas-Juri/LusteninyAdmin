@@ -1,5 +1,11 @@
 import { Layout } from "../components/Layout";
+import { CountdownText } from "../components/atoms";
 import { mocks } from "../mock";
+
+const addHours = (date: Date, hours: number) => {
+  date.setHours(date.getHours() + hours);
+  return date;
+};
 
 export const GameHomePage = () => {
   return (
@@ -123,8 +129,32 @@ export const GameHomePage = () => {
               ))}
             </ul>
           </div>
-          <div className="col-span-2">
-            <h2 className="text-4xl font-semibold">Přehled Šifer</h2>
+          <div className="col-span-2 space-y-4">
+            <div className="space-y-1 rounded-lg border border-gray-200 bg-gray-100">
+              <div className="rounded-t-lg border-b border-gray-200 px-8 py-6">
+                <p>
+                  Do konce hry zbývá <CountdownText date={addHours(new Date(), 2)} />
+                </p>
+              </div>
+              <div className="px-8 py-6">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th className="py-0.5 text-left font-semibold">Týmy se nacházejí na stanovištích:</th>
+                      <td className="py-0.5 pl-4 text-right">4-8</td>
+                    </tr>
+                    <tr>
+                      <th className="py-0.5 text-left font-semibold">Počet týmů, kteří dokončili hru:</th>
+                      <td className="py-0.5 pl-4 text-right">3</td>
+                    </tr>
+                    <tr>
+                      <th className="py-0.5 text-left font-semibold">Počet týmů, kteří opustili hru:</th>
+                      <td className="py-0.5 pl-4 text-right">3</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </section>
