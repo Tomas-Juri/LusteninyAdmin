@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Link, useParams } from "wouter";
 import { mocks } from "../mock";
 import { RootState } from "../redux/store";
+import { Footer } from "./organisms";
 
 type Props = {
   children: ReactNode;
@@ -83,7 +84,7 @@ export const Layout = ({ children }: Props) => {
       <main className="bg-white">
         <div className="container mx-auto max-w-7xl px-4">{children}</div>
       </main>
-      <footer></footer>
+      <Footer />
     </>
   );
 };

@@ -1,8 +1,9 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { PencilIcon, PlusIcon, TrashIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useParams } from "wouter";
 import { Layout } from "../components/Layout";
+import { Button } from "../components/atoms";
 import { mocks } from "../mock";
 
 export const GameTeamsPage = () => {
@@ -11,7 +12,10 @@ export const GameTeamsPage = () => {
   return (
     <Layout>
       <section className="py-16">
-        <h2 className="text-4xl font-semibold">Týmy</h2>
+        <div className="flex items-end justify-between">
+          <h2 className="text-4xl font-semibold">Týmy</h2>
+          <Button type="link" href={`/games/${params.gameId}/teams/new`} text="Vytvořit tým" icon={<PlusIcon />} />
+        </div>
         <table className="mt-12 w-full">
           <thead>
             <tr>
